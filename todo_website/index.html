@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todogram - Your Daily Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Instagram-style Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="logo-text">Todogram</span>
+            </div>
+            <nav class="nav-icons">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-compass"></i>
+                <i class="fa-regular fa-user"></i>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Stories-style Categories -->
+        <div class="stories-container">
+            <div class="story-item active">
+                <div class="story-circle">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span>New Task</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <span>Work</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Personal</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <span>Study</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <span>Fitness</span>
+            </div>
+        </div>
+
+        <!-- Instagram-style Post Creation -->
+        <div class="create-post-card">
+            <div class="post-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">Create New Task</span>
+                        <span class="post-time">Share your goals</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <input type="text" id="todo-title" class="post-input" placeholder="What needs to be done?">
+                <textarea id="todo-detail" class="post-textarea" placeholder="Add more details... #productivity #goals" rows="3"></textarea>
+
+                <div class="post-actions">
+                    <div class="action-buttons">
+                        <button class="icon-btn"><i class="fa-regular fa-image"></i></button>
+                        <button class="icon-btn"><i class="fa-regular fa-face-smile"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                    <button id="save-btn" class="share-btn">Share</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feed Section -->
+        <div class="feed-section">
+            <div class="feed-header">
+                <h2><i class="fa-solid fa-fire"></i> Your Feed</h2>
+                <div class="feed-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Today</button>
+                    <button class="filter-btn">This Week</button>
+                </div>
+            </div>
+
+            <div id="todo-list" class="feed-container">
+                <!-- TODO items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

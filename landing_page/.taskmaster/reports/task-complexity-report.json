@@ -1,0 +1,61 @@
+{
+	"meta": {
+		"generatedAt": "2025-09-27T07:35:25.166Z",
+		"tasksAnalyzed": 6,
+		"totalTasks": 6,
+		"analysisCount": 6,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": false
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 1,
+			"taskTitle": "프로젝트 초기 설정",
+			"complexityScore": 4,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "각 설정 항목(Next.js 14+ App Router, TypeScript, Tailwind CSS, ESLint/Prettier, 디렉토리 구조)을 개별적으로 세분화하여, 환경 구축 및 검증 단계를 포함한 세부 작업으로 분해하세요.",
+			"reasoning": "프로젝트 초기 설정은 표준화된 절차로 구성되어 있으나, 각 설정 항목이 독립적으로 검증되어야 하므로 최소 5개 이상의 세부 작업으로 분리하는 것이 효율적입니다. 복잡도는 중간 이하(4)로 판단됩니다."
+		},
+		{
+			"taskId": 2,
+			"taskTitle": "공통 컴포넌트 개발",
+			"complexityScore": 6,
+			"recommendedSubtasks": 6,
+			"expansionPrompt": "Header, Footer, Navigation 컴포넌트별로 UI/로직 분리, 반응형 적용, 접근성 및 테스트 작업까지 포함하여 세부 작업으로 분해하세요.",
+			"reasoning": "여러 개의 UI 컴포넌트와 반응형, 접근성, 테스트까지 포함되어 있어 단일 작업으로 처리하기에는 범위가 넓습니다. 각 컴포넌트별 구현과 공통 스타일 적용, 테스트 등으로 최소 6개 이상의 세부 작업이 필요합니다."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "메인 페이지 개발",
+			"complexityScore": 7,
+			"recommendedSubtasks": 6,
+			"expansionPrompt": "HeroSlider, CompanyIntro, 메인 레이아웃, 이미지 최적화, 반응형, 통합 테스트 등으로 세분화하여 각 기능별로 작업을 분리하세요.",
+			"reasoning": "HeroSlider와 CompanyIntro 등 복수의 주요 섹션과 레이아웃, 이미지 최적화, 통합 테스트까지 포함되어 있어 복잡도가 높습니다. 각 섹션별 구현과 통합 작업을 분리하면 효율적입니다."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "컨설팅 문의 페이지 개발",
+			"complexityScore": 7,
+			"recommendedSubtasks": 7,
+			"expansionPrompt": "ContactForm UI/로직, 입력 필드별 검증, 연락처 정보, 폼 유효성, 성공 메시지, 접근성, 테스트 등으로 세부 작업을 분리하세요.",
+			"reasoning": "폼 검증, 입력 필드별 처리, 성공 메시지, 접근성 등 다양한 세부 요소가 포함되어 있어 복잡도가 높으며, 각 기능별로 세분화가 필요합니다."
+		},
+		{
+			"taskId": 5,
+			"taskTitle": "컨설팅 프로세스 페이지 개발",
+			"complexityScore": 6,
+			"recommendedSubtasks": 6,
+			"expansionPrompt": "ProcessTimeline 컴포넌트 구조 설계, 각 단계별 UI/데이터, 아이콘/설명, 타임라인/스텝 바 구현, 산출물 표시, 반응형 및 테스트로 세분화하세요.",
+			"reasoning": "5단계 프로세스 시각화, 각 단계별 데이터, 타임라인 UI 등 복합적인 요소가 있으나, 반복 구조가 명확해 세부 작업 분리가 용이합니다."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "스타일링 및 디자인 시스템 구현",
+			"complexityScore": 5,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "색상 시스템, 타이포그래피, 그리드, spacing, 반응형 브레이크포인트 등 각 디자인 시스템 요소별로 세부 작업을 분리하세요.",
+			"reasoning": "디자인 시스템 구축은 각 요소별로 독립적으로 구현 및 검증이 가능하므로, 5개 정도의 세부 작업으로 분리하는 것이 적합합니다. 복잡도는 중간 수준입니다."
+		}
+	]
+}

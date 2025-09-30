@@ -1,0 +1,198 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "프로젝트 초기 설정",
+        "description": "Next.js 14+ 프로젝트 초기화 및 기본 설정",
+        "details": "- Next.js 14+ App Router 설정\\n- TypeScript 설정\\n- Tailwind CSS 설정\\n- ESLint/Prettier 설정\\n- 기본 디렉토리 구조 생성",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "공통 컴포넌트 개발",
+        "description": "Header, Footer, Navigation 등 공통 컴포넌트 구현",
+        "details": "- Header 컴포넌트 (로고, 네비게이션)\\n- Footer 컴포넌트 (회사 정보, 링크, 저작권)\\n- Navigation 컴포넌트 (스티키 네비게이션, 햄버거 메뉴)\\n- 반응형 디자인 적용",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "메인 페이지 개발",
+        "description": "HeroSlider와 CompanyIntro 섹션이 포함된 메인 페이지 구현",
+        "details": "- HeroSlider 컴포넌트 (3장 이미지, 자동 슬라이드, 네비게이션)\\n- CompanyIntro 섹션 (회사 소개, 비전, 미션, CTA 버튼)\\n- 메인 페이지 레이아웃 구성\\n- Next.js Image 컴포넌트 활용",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [
+          2
+        ],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "HeroSlider 컴포넌트 개발",
+            "description": "3장 이미지, 자동 슬라이드, 네비게이션 기능을 포함한 HeroSlider 컴포넌트 구현",
+            "dependencies": [],
+            "details": "react-slick 또는 Swiper 등 라이브러리 활용, Next.js Image 컴포넌트로 이미지 최적화, 슬라이드 전환/네비게이션/자동재생 옵션 적용",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "CompanyIntro 섹션 개발",
+            "description": "회사 소개, 비전, 미션, CTA 버튼이 포함된 CompanyIntro 섹션 구현",
+            "dependencies": [],
+            "details": "텍스트 및 버튼 레이아웃 설계, 반응형 스타일 적용, 디자인 시스템에 맞춘 컴포넌트 구조화",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "메인 페이지 레이아웃 구성",
+            "description": "HeroSlider와 CompanyIntro를 포함하는 메인 페이지 전체 레이아웃 설계 및 구현",
+            "dependencies": [
+              "3.1",
+              "3.2"
+            ],
+            "details": "Next.js App Router 기반 페이지 구조, 섹션 배치 및 그리드 시스템 적용, 디자인 시스템 연동",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "반응형 디자인 적용",
+            "description": "HeroSlider, CompanyIntro, 메인 레이아웃에 반응형 스타일 적용",
+            "dependencies": [
+              "3.1",
+              "3.2",
+              "3.3"
+            ],
+            "details": "Tailwind CSS 브레이크포인트 활용, 모바일/태블릿/데스크탑 대응, 레이아웃 및 폰트 크기 조정",
+            "status": "done",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "컨설팅 문의 페이지 개발",
+        "description": "문의 폼과 연락처 정보가 포함된 컨설팅 문의 페이지 구현",
+        "details": "- ContactForm 컴포넌트 (React Hook Form + Zod 검증)\\n- 입력 필드: 이름, 전화번호, 이메일, 문의내용\\n- 연락처 정보 섹션\\n- 폼 유효성 검증 및 성공 메시지",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [
+          2
+        ],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "ContactForm UI 및 기본 로직 구현",
+            "description": "React Hook Form을 활용하여 ContactForm 컴포넌트의 UI와 폼 제출/초기화 등 기본 로직을 구현합니다.",
+            "dependencies": [],
+            "details": "이름, 전화번호, 이메일, 문의내용 입력 필드와 제출 버튼을 포함한 폼 UI를 설계하고, 폼 상태 관리 및 제출 이벤트 핸들러를 작성합니다.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "입력 필드별 유효성 검증 로직 구현",
+            "description": "Zod를 이용해 각 입력 필드(이름, 전화번호, 이메일, 문의내용)에 대한 유효성 검증 스키마를 작성하고, 폼에 적용합니다.",
+            "dependencies": [
+              "4.1"
+            ],
+            "details": "각 필드별로 필수 입력, 형식(이메일, 전화번호 등) 검증 규칙을 정의하고, 에러 메시지 표시 로직을 구현합니다.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "연락처 정보 섹션 구현",
+            "description": "컨설팅 문의 페이지 내에 회사 연락처, 이메일, 주소 등 연락처 정보를 표시하는 섹션을 구현합니다.",
+            "dependencies": [
+              "4.1"
+            ],
+            "details": "연락처 정보는 별도의 컴포넌트로 분리하여 시각적으로 구분되게 배치합니다.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "폼 전체 유효성 및 에러 처리",
+            "description": "폼 제출 시 전체 유효성 검증이 동작하도록 하고, 에러 발생 시 사용자에게 명확하게 안내합니다.",
+            "dependencies": [
+              "4.2"
+            ],
+            "details": "모든 필드가 유효할 때만 제출이 가능하도록 하고, 에러 발생 시 폼 상단 또는 각 필드별로 에러 메시지를 표시합니다.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "성공 메시지 및 폼 리셋 처리",
+            "description": "폼 제출 성공 시 사용자에게 성공 메시지를 표시하고, 입력값을 초기화합니다.",
+            "dependencies": [
+              "4.4"
+            ],
+            "details": "성공 메시지는 별도의 컴포넌트 또는 알림 형태로 구현하며, 일정 시간 후 자동으로 사라지도록 처리할 수 있습니다.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "접근성(A11y) 개선",
+            "description": "폼 및 연락처 정보 섹션에 접근성 표준을 적용하여 시각장애인 등도 이용할 수 있도록 개선합니다.",
+            "dependencies": [
+              "4.1",
+              "4.3"
+            ],
+            "details": "label-for, aria 속성, 키보드 네비게이션, 명확한 포커스 표시 등 접근성 요소를 점검 및 적용합니다.",
+            "status": "done",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "컨설팅 프로세스 페이지 개발",
+        "description": "5단계 컨설팅 프로세스를 시각적으로 표현하는 페이지 구현",
+        "details": "- ProcessTimeline 컴포넌트 (5단계 프로세스)\\n- 각 단계별 아이콘, 제목, 설명\\n- 타임라인 또는 스텝 바 형식\\n- 예상 소요 기간 및 주요 산출물 표시",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [
+          2
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "스타일링 및 디자인 시스템 구현",
+        "description": "PRD에 명시된 색상, 타이포그래피, 레이아웃 시스템 구현",
+        "details": "- 색상 시스템 (#1e3a8a, #3b82f6, #f97316, #ffffff, #f9fafb)\\n- 타이포그래피 (Pretendard/Noto Sans KR)\\n- 그리드 시스템 (12컬럼, 1280px 최대 너비)\\n- spacing 시스템 (8px 배수)\\n- 반응형 브레이크포인트 설정",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [
+          1
+        ],
+        "priority": "medium",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-01-27T07:25:00.000Z",
+      "updated": "2025-09-27T09:24:51.691Z",
+      "version": "1.0.0",
+      "description": "Tasks for master context"
+    }
+  }
+}

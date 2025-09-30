@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+@layer base {
+  /* Chrome, Safari, Edge */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-linkedin-blue;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af #f3f4f6;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-linkedin-blue bg-opacity-20 text-linkedin-darkBlue;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-linkedin-blue ring-offset-2;
+  }
+}
+
+/* LinkedIn-style card hover effect */
+@layer components {
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .linkedin-card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm p-4 card-hover;
+  }
+
+  /* Professional button styles */
+  .btn-primary {
+    @apply bg-linkedin-blue hover:bg-linkedin-darkBlue text-white font-semibold px-6 py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-linkedin-blue border-2 border-linkedin-blue font-semibold px-6 py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  /* Text styles */
+  .text-gradient {
+    @apply bg-gradient-to-r from-linkedin-blue to-linkedin-darkBlue bg-clip-text text-transparent;
+  }
+
+  /* Smooth animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
+
+/* Loading skeleton animation */
+@layer utilities {
+  .skeleton {
+    @apply animate-pulse bg-gray-200;
+  }
+
+  .skeleton-text {
+    @apply h-4 bg-gray-200 rounded animate-pulse;
+  }
+
+  .skeleton-box {
+    @apply bg-gray-200 rounded animate-pulse;
+  }
+}
+
+/* Professional transitions */
+.transition-professional {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glass morphism effect (LinkedIn-style) */
+.glass-effect {
+  @apply bg-white bg-opacity-95 backdrop-blur-sm;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
